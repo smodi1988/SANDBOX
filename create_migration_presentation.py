@@ -8,7 +8,15 @@ from pptx.util import Inches, Pt
 from pptx.enum.text import PP_ALIGN
 
 def create_title_slide(prs):
-    """Create the title slide"""
+    """
+    Create the title slide.
+    
+    Args:
+        prs: Presentation object to add the slide to
+        
+    Returns:
+        slide: The created slide object
+    """
     slide_layout = prs.slide_layouts[0]  # Title slide layout
     slide = prs.slides.add_slide(slide_layout)
     
@@ -21,7 +29,17 @@ def create_title_slide(prs):
     return slide
 
 def create_content_slide(prs, title, content_points):
-    """Create a content slide with bullet points"""
+    """
+    Create a content slide with bullet points.
+    
+    Args:
+        prs: Presentation object to add the slide to
+        title (str): Title of the slide
+        content_points (list): List of bullet points (can include tuples for nested points)
+        
+    Returns:
+        slide: The created slide object
+    """
     slide_layout = prs.slide_layouts[1]  # Title and Content layout
     slide = prs.slides.add_slide(slide_layout)
     
@@ -51,6 +69,12 @@ def create_content_slide(prs, title, content_points):
     return slide
 
 def main():
+    """
+    Main function to create and save the PowerPoint presentation for EDWH to EDP migration.
+    
+    Creates a 13-slide presentation covering the migration journey from Informatica PowerCenter
+    to IDMC and Teradata to BigQuery, including introduction, challenges, solutions, and benefits.
+    """
     # Create presentation
     prs = Presentation()
     prs.slide_width = Inches(10)
