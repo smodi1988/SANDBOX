@@ -243,7 +243,7 @@ def main():
     # Print summary
     print(f"\nPresentation Summary:")
     print(f"Total Slides: {len(prs.slides)}")
-    print(f"File: {output_file}")
+    print(f"File: {output_file}\n")
 
 if __name__ == "__main__":
     main()
