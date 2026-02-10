@@ -6,3 +6,4 @@ sqlalchemy
 pyarrow
 python-dotenv
 pandas-gbq
+python-pptx
